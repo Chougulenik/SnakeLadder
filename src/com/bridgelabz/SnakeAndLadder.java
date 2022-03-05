@@ -8,15 +8,14 @@ public class SnakeAndLadder {
 	static int getRandomValue(){
 			int randomValue = random.nextInt(6) +1;
 			System.out.println("Player Roll the die");
-			
+			randomValue = randomValue + 1;
 			System.out.println("number : " +randomValue);
 			return randomValue;
 	}
 	static int getRandomOption(int startPosition ,int dice) {
 			int randomOption = random.nextInt(3);
-			
-			System.out.println("Choose option");
-			System.out.println(randomOption);
+			randomOption = randomOption + 1;
+			System.out.println("Choose option : " +randomOption);
 			
 			switch(randomOption)
 			{
@@ -28,23 +27,31 @@ public class SnakeAndLadder {
 				   System.out.println("Ladder the Player moves ahead :" + startPosition);
 				   break;
 			case 2 :
-				   startPosition = startPosition - dice;
-				   System.out.println("Snake the player moves behind : " + startPosition);
-				   break;
+					if(startPosition >= 0)
+						startPosition = startPosition - dice;
+						System.out.println("Snake the player moves behind : " + startPosition);
+						break;
+			default :
+				
 			}
-			return randomOption;
+			System.out.println();
+			return startPosition;
 	}
 	
 		public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 			int startPosition = 0;
 			int dice =0;
+
 		System.out.println("Welcome to Snake And Ladder Game");
-			
+		while(startPosition <= 100)	{
 		dice = getRandomValue();
 		startPosition = getRandomOption(startPosition , dice);
+     }
+			System.out.println("Win the game postion is : " +startPosition);
 
-	
+			
+
       }
       
 	}
