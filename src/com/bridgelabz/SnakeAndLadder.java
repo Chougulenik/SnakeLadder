@@ -39,6 +39,7 @@ public class SnakeAndLadder {
 		
 			int startPosition = 0;
 			int dice =0;
+
 			System.out.println("Welcome to Snake And Ladder Game \n");
 			System.out.println("Singal Player at start position " +startPosition);
 			while (startPosition <= 100)	{
@@ -51,7 +52,7 @@ public class SnakeAndLadder {
 				System.out.println("win the game position : "+startPosition);
 			}
 			else
-				System.out.println("Win the game postion : " +startPosition);
+				System.out.println("Win the game postion : " +startPosition);		
 
       }
       
