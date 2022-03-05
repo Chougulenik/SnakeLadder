@@ -42,12 +42,15 @@ public class SnakeAndLadder {
 		
 			int startPosition = 0;
 			int dice =0;
-			System.out.println("Welcome to Snake And Ladder Game");
-			while(startPosition <= 100)	{
-				dice = getRandomValue();
-				getRandomOption(startPosition , dice);
-			}
+
+		System.out.println("Welcome to Snake And Ladder Game");
+		while(startPosition <= 100)	{
+		dice = getRandomValue();
+		startPosition = getRandomOption(startPosition , dice);
+     }
 			System.out.println("Win the game postion is : " +startPosition);
+
+			
 
       }
       
